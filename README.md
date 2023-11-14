@@ -2,20 +2,20 @@
 
   <img src="./public/images/favicon-32x32.png" alt="logo" width="30" height="auto">
 
-  <h2>Multi Step Form</h2>
+  <h2>Space Tourism</h2>
 
   <h3>
     <a href="https://multi-step-form-codepapa.vercel.app">
-      <strong>Demo Website</strong>
+      <strong>View Demo</strong>
+    </a> || <a href="">
+      <strong>Frontend Mentor</strong>
     </a>
   </h3>
 
   <div align="center">
-    <a href="https://www.frontendmentor.io/solutions/multi-step-form-w-react-and-redux-toolkit-XaJTbJ92Xn">Solution (FEM)</a>
+    <a href="https://github.com/CodePapa360/Space-Tourism-website/issues">Report Bug</a>
     •
-    <a href="https://github.com/CodePapa360/Multi-Step-Form/issues">Report Bug</a>
-    •
-    <a href="https://github.com/CodePapa360/Multi-Step-Form/pulls">Request Feature</a>
+    <a href="https://github.com/CodePapa360/Space-Tourism-website/pulls">Request Feature</a>
   </div>
 
   <hr>
@@ -38,11 +38,11 @@
 
 <!-- Brief -->
 <p align="center">
-This React project demonstrates a multi-step form. The form utilizes React Hook Form for data validation and Redux Toolkit for state management, enhancing user experience and data integrity.
+This React project demonstrates...
 </p>
 
 <!-- Screenshot -->
-<a align="center" href="https://multi-step-form-codepapa.vercel.app">
+<a align="center" href="https://space-tourism-codepapa.vercel.app">
 
 ![Screenshot](./public/thumbnail-preview.png)
 
@@ -51,6 +51,7 @@ This React project demonstrates a multi-step form. The form utilizes React Hook 
 ## Table of contents📚
 
 - [Key Features](#key-features)
+- [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
@@ -63,39 +64,31 @@ This React project demonstrates a multi-step form. The form utilizes React Hook 
 
 Users should be able to:
 
-- Complete each step of the sequence
-- Go back to a previous step to update their selections
-- See a summary of their selections on the final step and confirm their order
-- Receive form validation messages if:
-  - A field has been missed
-  - The email address is not formatted correctly
-  - A step is submitted, but no selection has been made
-- See hover and focus states for all interactive elements on the page
-- View the optimal layout for the interface depending on their device's screen size
+- View the optimal layout for each of the website's pages depending on their device's screen size
+- See hover states for all interactive elements on the page
+- View each page and be able to toggle between the tabs to see new information
+
+## Links
+
+- View Demo - https://space-tourism-codepapa.vercel.app
+- Solution page - [https://...]()
 
 ## My process🛠️
 
 ### Tech Stack🏗️
 
 - React
-- React Hook Form
-- Styled Components
+- Tailwind CSS
 - Vite
 
 ### What I Learned💡
-
-- **Breaking down complex forms into manageable steps:** I learned that multi-step forms can significantly improve user engagement and reduce form abandonment by breaking down complex data collection processes into smaller, more manageable steps.
-
-- **Implementing data validation with React Hook Form:** I gained experience in utilizing React Hook Form to effectively validate user inputs, ensuring data integrity and preventing invalid submissions.
-
-- **Leveraging Redux Toolkit for state management:** I explored the power of Redux Toolkit for managing the form's state, facilitating consistent data handling and easy updates.
 
 ## Installation📥
 
 - Clone this repo:
 
 ```sh
-git clone https://github.com/CodePapa360/Multi-Step-Form.git
+git clone https://github.com/CodePapa360/Space-Tourism-website.git
 ```
 
 - Install dependencies:
