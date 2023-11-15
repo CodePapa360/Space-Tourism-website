@@ -21,7 +21,7 @@ function Destination() {
         ))}
       </ul>
 
-      <p>{selectedDestination.name}</p>
+      <p className="text-7xl font-[100]">{selectedDestination.name}</p>
       <p>{selectedDestination.description}</p>
     </>
   );

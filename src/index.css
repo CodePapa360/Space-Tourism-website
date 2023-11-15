@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    --c: no-repeat linear-gradient(theme(colors.slate.800) 0 0);
+    background: var(--c);
+    min-height: 100dvh;
+    color: rgb(238, 238, 238);
+  }
+}
+
+/* 
+font-family: 'Barlow', sans-serif;
+font-family: 'Bellefair', serif; 
+*/
+nav .active {
+  border-bottom: 4px solid white;
+}
