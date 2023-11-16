@@ -5,16 +5,16 @@ function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="absolute left-0 top-0 flex w-full items-start justify-between md:items-center">
-      <Link to="/home" className="m-4 w-10">
+    <div className="absolute left-0 top-0 flex w-full items-center justify-between p-4 md:px-0 md:py-8">
+      <Link to="/home" className="w-10 md:mx-8">
         <img className="w-full" src="/images/shared/logo.svg" alt="Logo" />
       </Link>
 
-      {/* <span className="z-10 -mr-4 ml-auto h-[1px] w-full bg-slate-500"></span> */}
+      <span className="z-10 -mr-8 ml-auto hidden h-[1px] grow bg-slate-500 md:block"></span>
 
       <span
         onClick={() => setIsOpen((open) => !open)}
-        className="z-10 m-4 cursor-pointer md:hidden"
+        className="z-10 cursor-pointer md:hidden"
       >
         <img
           src={`/images/shared/icon-${isOpen ? "close" : "hamburger"}.svg`}
