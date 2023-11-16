@@ -5,7 +5,7 @@ function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="absolute left-0 top-0 flex w-full items-center justify-between p-4 md:px-0 md:py-8">
+    <div className="absolute left-0 top-0 z-20 flex w-full items-center justify-between p-4 md:px-0 md:py-8">
       <Link to="/home" className="w-10 md:mx-8">
         <img className="w-full" src="/images/shared/logo.svg" alt="Logo" />
       </Link>
