@@ -14,17 +14,20 @@ function Navbar() {
 
       <span
         onClick={() => setIsOpen((open) => !open)}
-        className="z-10 m-4 cursor-pointer"
+        className="z-10 m-4 cursor-pointer md:hidden"
       >
-        <img src="/images/shared/icon-hamburger.svg" alt="" />
+        <img
+          src={`/images/shared/icon-${isOpen ? "close" : "hamburger"}.svg`}
+          alt="Menu"
+        />
       </span>
 
       <nav
         className={`${
           isOpen ? "right-0" : "right-[-100%]"
-        } fixed  top-0 h-screen w-[60%] bg-slate-700/25 backdrop-blur-lg transition-all`}
+        } fixed top-0 h-screen w-full max-w-[13rem] bg-slate-700/25 backdrop-blur-lg transition-all md:relative md:right-0 md:h-auto md:w-auto md:max-w-none md:px-20`}
       >
-        <ul className="mt-14 flex flex-col gap-2 p-4 ">
+        <ul className="mt-14 flex flex-col gap-2 pl-8 uppercase md:mt-0 md:flex-row md:gap-8 md:pl-0">
           <li>
             <NavLink className="navItem" to="/home">
               Home
