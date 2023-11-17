@@ -1,3 +1,14 @@
+import { createGlobalStyle } from "styled-components";
+
+export const breakpoints = {
+  xs: "320px", // Extra small devices (phones)
+  sm: "768px", // Small devices (tablets)
+  md: "992px", // Medium devices (desktops)
+  lg: "1200px", // Large devices (desktops)
+  xl: "1440px", // Extra large devices (desktops)
+};
+
+const GlobalStyles = createGlobalStyle`
 body {
   background-color: #08080e;
   min-height: 100dvh;
@@ -123,3 +134,7 @@ button:has(svg) {
     scroll-behavior: auto !important;
   }
 }
+
+`;
+
+export default GlobalStyles;
