@@ -5,61 +5,6 @@ body {
   font-family: "Barlow", sans-serif;
 }
 
-/* font-family: 'Barlow', sans-serif;
-font-family: 'Bellefair', serif; */
-
-.explore-circle {
-  transition: all 0.2s ease;
-}
-
-.explore-circle:hover {
-  letter-spacing: 2px;
-}
-
-.explore-circle::after {
-  height: 100%;
-  width: 100%;
-  background-color: rgba(255, 255, 255, 0.459);
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  z-index: -1;
-  transition: all 0.5s ease;
-  pointer-events: none;
-  opacity: 0;
-}
-
-.explore-circle:hover::after {
-  height: 120%;
-  width: 120%;
-  opacity: 1;
-}
-
-.explore-circle::before {
-  height: 100%;
-  width: 100%;
-  background-color: rgba(255, 255, 255, 0.459);
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  z-index: -1;
-  pointer-events: none;
-}
-
-.explore-circle:hover::before {
-  animation-name: circleing;
-  animation-iteration-count: 1;
-  animation-duration: 0.5s;
-  animation-timing-function: ease;
-  animation-fill-mode: forwards;
-}
-
 @keyframes circleing {
   to {
     height: 150%;

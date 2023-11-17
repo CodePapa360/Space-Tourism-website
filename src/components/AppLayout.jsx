@@ -10,9 +10,9 @@ function AppLayout() {
   return (
     <StyledAppLayout pageLocation={pageLocation}>
       <Navbar />
-      <main>
+      <MainContent>
         <Outlet />
-      </main>
+      </MainContent>
       <Footer />
     </StyledAppLayout>
   );
@@ -48,4 +48,8 @@ const StyledAppLayout = styled.div.withConfig({
   flex-direction: column;
   min-height: 100dvh;
   position: relative;
+`;
+
+const MainContent = styled.main`
+  margin-top: auto;
 `;
