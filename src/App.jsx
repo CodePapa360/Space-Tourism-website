@@ -18,6 +18,8 @@ function App() {
           <Route path="/crew" element={<Crew />} />
           <Route path="/technology" element={<Technology />} />
         </Route>
+
+        <Route path="*" element={<p>No page</p>} />
       </Routes>
     </BrowserRouter>
   );

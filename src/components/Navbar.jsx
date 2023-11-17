@@ -1,57 +1,162 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import styled from "styled-components";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="absolute left-0 top-0 z-20 flex w-full items-center justify-between p-4 md:px-0 md:py-8">
-      <Link to="/home" className="w-10 md:mx-8">
-        <img className="w-full" src="/images/shared/logo.svg" alt="Logo" />
-      </Link>
+    <StyledNavBar>
+      <Logo to="/home">
+        <img src="/images/shared/logo.svg" alt="Logo" />
+      </Logo>
 
-      <span className="z-10 -mr-8 ml-auto hidden h-[1px] grow bg-slate-500 md:block"></span>
+      <Line></Line>
 
-      <span
-        onClick={() => setIsOpen((open) => !open)}
-        className="z-10 cursor-pointer md:hidden"
-      >
+      <MenuButton onClick={() => setIsOpen((open) => !open)}>
         <img
           src={`/images/shared/icon-${isOpen ? "close" : "hamburger"}.svg`}
           alt="Menu"
         />
-      </span>
+      </MenuButton>
 
-      <nav
-        className={`${
-          isOpen ? "right-0" : "right-[-100%]"
-        } fixed top-0 h-screen w-full max-w-[13rem] bg-slate-700/25 backdrop-blur-lg transition-all md:relative md:right-0 md:h-auto md:w-auto md:max-w-none md:px-20`}
-      >
-        <ul className="mt-14 flex flex-col gap-2 pl-8 uppercase md:mt-0 md:flex-row md:gap-8 md:pl-0">
+      {isOpen && <Overlay onClick={() => setIsOpen((open) => !open)}></Overlay>}
+
+      <Navigation isOpen={isOpen}>
+        <ul>
           <li>
-            <NavLink className="navItem" to="/home">
-              Home
-            </NavLink>
+            <NavItem to="/home">Home</NavItem>
           </li>
           <li>
-            <NavLink className="navItem" to="/destination">
-              Destination
-            </NavLink>
+            <NavItem to="/destination">Destination</NavItem>
           </li>
           <li>
-            <NavLink className="navItem" to="/crew">
-              Crew
-            </NavLink>
+            <NavItem to="/crew">Crew</NavItem>
           </li>
           <li>
-            <NavLink className="navItem" to="/technology">
-              Technology
-            </NavLink>
+            <NavItem to="/technology">Technology</NavItem>
           </li>
         </ul>
-      </nav>
-    </div>
+      </Navigation>
+    </StyledNavBar>
   );
 }
 
 export default Navbar;
+
+const StyledNavBar = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  position: relative;
+
+  @media screen and (min-width: 768px) {
+    padding: 2rem 0 0 2rem;
+  }
+`;
+
+const Navigation = styled.nav.withConfig({
+  shouldForwardProp: (prop) => "isOpen" !== prop,
+})`
+  --width: 13rem;
+  position: fixed;
+  top: 0;
+  right: ${(props) => (props.isOpen ? "0" : `calc(-1 * var(--width))`)};
+  height: 100dvh;
+  width: 100%;
+  max-width: var(--width);
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  z-index: 10;
+
+  @media screen and (min-width: 768px) {
+    right: 0;
+    position: relative;
+    max-width: unset;
+    height: auto;
+    width: auto;
+  }
+
+  ul {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    padding-left: 2rem;
+    text-transform: uppercase;
+
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+      margin-top: 0;
+      padding: 0 5rem;
+    }
+  }
+`;
+
+const NavItem = styled(NavLink)`
+  display: inline-block;
+  border-bottom: 3px solid transparent;
+  padding-top: 1rem;
+  padding-bottom: 0.3rem;
+
+  @media screen and (min-width: 768px) {
+    padding: 1.5rem 1rem;
+  }
+
+  &:hover {
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+
+  &.active {
+    border-bottom: 3px solid white;
+  }
+`;
+
+const MenuButton = styled.span`
+  z-index: 20;
+  cursor: pointer;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+`;
+
+const Logo = styled(Link)`
+  width: 3rem;
+  margin-right: 2rem;
+
+  img {
+    width: 100%;
+  }
+`;
+
+const Line = styled.span`
+  margin-left: auto;
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: inline-block;
+    margin-right: -2rem;
+    z-index: 20;
+    height: 2px;
+    flex-grow: 1;
+    background-color: #ffffff5e;
+  }
+`;
+
+const Overlay = styled.span`
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100dvh;
+  width: 100dvw;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 2;
+  transition: all 0.3s ease;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+`;

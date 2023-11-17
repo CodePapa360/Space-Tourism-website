@@ -1,9 +1,15 @@
+import styled from "styled-components";
+
 function Footer() {
   return (
-    <footer>
+    <StyledFooter>
       <p>Codded by Alamin</p>
-    </footer>
+    </StyledFooter>
   );
 }
 
 export default Footer;
+
+const StyledFooter = styled.footer`
+  margin-top: auto;
+`;

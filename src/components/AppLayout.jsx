@@ -1,17 +1,51 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
+import styled from "styled-components";
 
 function AppLayout() {
+  const location = useLocation();
+  const pageLocation = location.pathname.split("/")[1];
+
   return (
-    <div className="relative ">
+    <StyledAppLayout pageLocation={pageLocation}>
       <Navbar />
       <main>
         <Outlet />
       </main>
       <Footer />
-    </div>
+    </StyledAppLayout>
   );
 }
 
 export default AppLayout;
+
+/////////////////
+// Styles
+/////////////////
+
+const StyledAppLayout = styled.div.withConfig({
+  shouldForwardProp: (prop) => "pageLocation" !== prop,
+})`
+  background-image: ${(props) =>
+    `url("/images/${props.pageLocation}/background-${props.pageLocation}-mobile.jpg")`};
+
+  @media screen and (min-width: 768px) {
+    background-image: ${(props) =>
+      `url("/images/${props.pageLocation}/background-${props.pageLocation}-tablet.jpg")`};
+  }
+
+  @media screen and (min-width: 1024px) {
+    background-image: ${(props) =>
+      `url("/images/${props.pageLocation}/background-${props.pageLocation}-desktop.jpg")`};
+  }
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  position: relative;
+`;
