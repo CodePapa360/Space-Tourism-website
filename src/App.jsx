@@ -18,7 +18,9 @@ function App() {
             <Route path="/destination" element={<Destination />}>
               <Route path=":name" element={<Destination />} />
             </Route>
-            <Route path="/crew" element={<Crew />} />
+            <Route path="/crew" element={<Crew />}>
+              <Route path=":name" element={<Crew />} />
+            </Route>
             <Route path="/technology" element={<Technology />} />
           </Route>
 

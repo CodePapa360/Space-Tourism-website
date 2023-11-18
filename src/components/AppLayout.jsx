@@ -55,6 +55,7 @@ const MainContent = styled.main`
   margin-top: 1rem;
   max-width: ${breakpoints.sm};
   margin-inline: auto;
+  margin-bottom: 3rem;
 
   @media screen and (min-width: ${breakpoints.sm}) {
     margin-top: 3rem;

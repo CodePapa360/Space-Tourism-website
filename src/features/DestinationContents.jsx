@@ -26,7 +26,7 @@ function DestinationContents() {
 
       <ContentsContainer>
         <ImageContainer>
-          <img src={currentDest.images.png} alt="mars" />
+          <img src={currentDest.images.png} alt={currentDest.name} />
         </ImageContainer>
 
         <TopSectionContainer>
@@ -57,7 +57,6 @@ const Details = styled.div`
   grid-template-columns: 1fr 1fr;
   text-align: center;
   position: relative;
-  margin-top: 2rem;
   padding-top: 1rem;
 
   @media screen and (min-width: ${breakpoints.md}) {

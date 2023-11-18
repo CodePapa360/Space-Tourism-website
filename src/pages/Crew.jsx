@@ -1,5 +1,7 @@
+import CrewContents from "../features/CrewContents";
+
 function Crew() {
-  return <div>Crew</div>;
+  return <CrewContents />;
 }
 
 export default Crew;
