@@ -23,7 +23,6 @@ function Navbar() {
       {isOpen && <Overlay onClick={() => setIsOpen((open) => !open)}></Overlay>}
 
       <Navigation className={isOpen ? "open" : ""}>
-        {/* <Navigation isOpen={isOpen}> */}
         <ul>
           <li>
             <NavItem onClick={() => setIsOpen((open) => !open)} to="/home">
@@ -134,7 +133,7 @@ const NavItem = styled(NavLink)`
 `;
 
 const MenuButton = styled.span`
-  z-index: 20;
+  z-index: 200;
   cursor: pointer;
 
   @media screen and (min-width: 768px) {
