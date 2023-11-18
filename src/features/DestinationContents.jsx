@@ -9,6 +9,7 @@ import InfoText from "../components/InfoText";
 import ImageContainer from "../components/ImageContainer";
 import styled from "styled-components";
 import { breakpoints } from "../styles/GlobalStyles";
+import NotFound from "../components/NotFound";
 
 function DestinationContents() {
   const destinations = jsonData.destinations;
@@ -16,9 +17,9 @@ function DestinationContents() {
   const activeName = destinationName || destinations[0].destinationName;
   const currentDest = destinations.find((des) => des.name === activeName);
 
-  if (!destinationName) {
+  if (!destinationName)
     return <Navigate to={`/destination/${destinations[0].name}`} replace />;
-  }
+  if (!currentDest) return <NotFound />;
 
   return (
     <>

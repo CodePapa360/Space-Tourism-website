@@ -8,6 +8,7 @@ import styled from "styled-components";
 import Hero from "../components/Hero";
 import InfoText from "../components/InfoText";
 import TabNav from "../components/TabNav";
+import NotFound from "../components/NotFound";
 
 function TechnologyContents() {
   const technologies = jsonData.technology;
@@ -15,9 +16,9 @@ function TechnologyContents() {
   const activeName = technologyName || technologies[0].name;
   const currentTechnology = technologies.find((des) => des.name === activeName);
 
-  if (!technologyName) {
+  if (!technologyName)
     return <Navigate to={`/technology/${technologies[0].name}`} replace />;
-  }
+  if (!currentTechnology) return <NotFound />;
 
   return (
     <>

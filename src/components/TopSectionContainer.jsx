@@ -8,6 +8,7 @@ const TopSectionContainer = styled.div.withConfig({
   flex-direction: column;
   gap: 0.5rem;
   max-width: 25rem;
+  padding-inline: 1rem;
 
   ${(prop) =>
     prop.type === "technology" &&

@@ -8,6 +8,7 @@ import TabNav from "../components/TabNav";
 import styled from "styled-components";
 import Hero from "../components/Hero";
 import InfoText from "../components/InfoText";
+import NotFound from "../components/NotFound";
 
 function CrewContents() {
   const crews = jsonData.crew;
@@ -15,9 +16,8 @@ function CrewContents() {
   const activeName = crewName || crews[0].name;
   const currentCrew = crews.find((des) => des.name === activeName);
 
-  if (!crewName) {
-    return <Navigate to={`/crew/${crews[0].name}`} replace />;
-  }
+  if (!crewName) return <Navigate to={`/crew/${crews[0].name}`} replace />;
+  if (!currentCrew) return <NotFound />;
 
   return (
     <>
