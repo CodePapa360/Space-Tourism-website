@@ -70,6 +70,10 @@ const StyledNavBar = styled.div`
   }
 `;
 
+////////////////
+/////STYLES/////
+////////////////
+
 const Navigation = styled.nav.withConfig({
   shouldForwardProp: (prop) => "isOpen" !== prop,
 })`
@@ -77,7 +81,6 @@ const Navigation = styled.nav.withConfig({
   position: fixed;
   top: 0;
   right: calc(-1 * var(--width));
-  /* right: ${(props) => (props.isOpen ? "0" : `calc(-1 * var(--width))`)}; */
   height: 100dvh;
   width: 100%;
   max-width: var(--width);

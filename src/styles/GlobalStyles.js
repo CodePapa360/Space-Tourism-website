@@ -14,7 +14,7 @@ html {
 }
 
 body {
-  background-color: #08080e;
+  background-color: #2b2a33;
   min-height: 100dvh;
   color: rgb(238, 238, 238);
   font-family: "Barlow", sans-serif;
@@ -22,6 +22,7 @@ body {
 
 }
 
+/* #42414d */
 
 @keyframes circleing {
   to {

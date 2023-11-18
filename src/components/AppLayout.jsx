@@ -47,21 +47,25 @@ const StyledAppLayout = styled.div.withConfig({
 
   display: flex;
   flex-direction: column;
-  min-height: 100dvh;
+  min-height: 100svh;
   position: relative;
 `;
 
 const MainContent = styled.main`
-  margin-top: 1rem;
   max-width: ${breakpoints.md};
-  margin-inline: auto;
-  margin-bottom: 3rem;
+  margin: 2rem auto;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
   @media screen and (min-width: ${breakpoints.sm}) {
-    margin-top: 3rem;
+    margin: 3rem auto;
   }
 
   @media screen and (min-width: ${breakpoints.md}) {
-    margin-top: 4rem;
+    margin: 4rem auto;
+    align-items: flex-start;
   }
 `;

@@ -5,6 +5,7 @@ import Destination from "./pages/Destination";
 import Crew from "./pages/Crew";
 import Technology from "./pages/Technology";
 import GlobalStyles from "./styles/GlobalStyles";
+import NotFound from "./components/NotFound";
 
 function App() {
   return (
@@ -24,9 +25,8 @@ function App() {
             <Route path="/technology" element={<Technology />}>
               <Route path=":name" element={<Technology />} />
             </Route>
+            <Route path="*" element={<NotFound />} />
           </Route>
-
-          <Route path="*" element={<p>No page</p>} />
         </Routes>
       </BrowserRouter>
     </>
