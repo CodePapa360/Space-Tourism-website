@@ -53,7 +53,7 @@ const StyledAppLayout = styled.div.withConfig({
 
 const MainContent = styled.main`
   margin-top: 1rem;
-  max-width: ${breakpoints.sm};
+  max-width: ${breakpoints.md};
   margin-inline: auto;
   margin-bottom: 3rem;
 

@@ -21,7 +21,9 @@ function App() {
             <Route path="/crew" element={<Crew />}>
               <Route path=":name" element={<Crew />} />
             </Route>
-            <Route path="/technology" element={<Technology />} />
+            <Route path="/technology" element={<Technology />}>
+              <Route path=":name" element={<Technology />} />
+            </Route>
           </Route>
 
           <Route path="*" element={<p>No page</p>} />

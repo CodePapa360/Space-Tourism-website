@@ -10,7 +10,7 @@ const ImageContainer = styled.div`
   align-items: center;
 
   @media screen and (min-width: ${breakpoints.md}) {
-    max-height: 16rem;
+    max-height: 22rem;
   }
 
   img {

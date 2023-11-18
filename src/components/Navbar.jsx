@@ -85,7 +85,7 @@ const Navigation = styled.nav.withConfig({
   background-color: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(10px);
   transition: all 0.3s ease;
-  z-index: 10;
+  z-index: 100;
 
   &.open {
     right: 0;
@@ -173,7 +173,7 @@ const Overlay = styled.span`
   height: 100dvh;
   width: 100dvw;
   background-color: rgba(0, 0, 0, 0.3);
-  z-index: 2;
+  z-index: 99;
   transition: all 0.3s ease;
 
   @media screen and (min-width: 768px) {

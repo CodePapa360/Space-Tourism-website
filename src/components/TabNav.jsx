@@ -6,10 +6,11 @@ function TabNav({ type, contents }) {
   return (
     <NavContainer type={type}>
       <NavLinks type={type}>
-        {contents.map((cont) => (
+        {contents.map((cont, i) => (
           <li key={cont.name}>
             <TabNavItem type={type} to={cont.name}>
-              {type !== "dotted" && cont.name}
+              {type === "named" && cont.name}
+              {type === "numbered" && i + 1}
             </TabNavItem>
           </li>
         ))}
@@ -51,6 +52,19 @@ const NavLinks = styled.ul.withConfig({
       margin-bottom: 0;
     `}
 
+  ${(props) =>
+    props.type === "numbered" &&
+    css`
+      flex-direction: row;
+      gap: 1rem;
+      order: 2;
+      margin-bottom: 0;
+
+      @media screen and (min-width: ${breakpoints.md}) {
+        flex-direction: column;
+      }
+    `}
+  
   @media screen and (min-width: ${breakpoints.md}) {
     justify-content: flex-start;
   }
@@ -68,6 +82,30 @@ const TabNavItem = styled(NavLink)`
   &.active {
     border-bottom-color: white;
   }
+
+  ${(props) =>
+    props.type === "numbered" &&
+    css`
+      /* padding: 1rem; */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #ffffff73;
+      height: 3.5rem;
+      width: 3.5rem;
+      border-radius: 50%;
+      font-size: 1.3rem;
+
+      &:hover {
+        background-color: #ffffffb0;
+        color: black;
+      }
+
+      &.active {
+        background-color: white;
+        color: black;
+      }
+    `}
 
   ${(props) =>
     props.type === "dotted" &&
