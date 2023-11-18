@@ -1,9 +1,10 @@
 import styled from "styled-components";
+import Attribution from "./Attribution";
 
 function Footer() {
   return (
     <StyledFooter>
-      <p>Codded by Alamin</p>
+      <Attribution />
     </StyledFooter>
   );
 }
