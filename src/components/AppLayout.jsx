@@ -2,6 +2,7 @@ import { Outlet, useLocation } from "react-router-dom";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 import styled from "styled-components";
+import { breakpoints } from "../styles/GlobalStyles";
 
 function AppLayout() {
   const location = useLocation();
@@ -51,5 +52,15 @@ const StyledAppLayout = styled.div.withConfig({
 `;
 
 const MainContent = styled.main`
-  margin-top: auto;
+  margin-top: 1rem;
+  max-width: ${breakpoints.sm};
+  margin-inline: auto;
+
+  @media screen and (min-width: ${breakpoints.sm}) {
+    margin-top: 3rem;
+  }
+
+  @media screen and (min-width: ${breakpoints.md}) {
+    margin-top: 4rem;
+  }
 `;

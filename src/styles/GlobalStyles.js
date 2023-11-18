@@ -9,12 +9,19 @@ export const breakpoints = {
 };
 
 const GlobalStyles = createGlobalStyle`
+html {
+  scrollbar-gutter: stable;
+}
+
 body {
   background-color: #08080e;
   min-height: 100dvh;
   color: rgb(238, 238, 238);
   font-family: "Barlow", sans-serif;
+  position: relative;
+
 }
+
 
 @keyframes circleing {
   to {

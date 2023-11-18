@@ -22,19 +22,34 @@ function Navbar() {
 
       {isOpen && <Overlay onClick={() => setIsOpen((open) => !open)}></Overlay>}
 
-      <Navigation isOpen={isOpen}>
+      <Navigation className={isOpen ? "open" : ""}>
+        {/* <Navigation isOpen={isOpen}> */}
         <ul>
           <li>
-            <NavItem to="/home">Home</NavItem>
+            <NavItem onClick={() => setIsOpen((open) => !open)} to="/home">
+              Home
+            </NavItem>
           </li>
           <li>
-            <NavItem to="/destination">Destination</NavItem>
+            <NavItem
+              onClick={() => setIsOpen((open) => !open)}
+              to="/destination"
+            >
+              Destination
+            </NavItem>
           </li>
           <li>
-            <NavItem to="/crew">Crew</NavItem>
+            <NavItem onClick={() => setIsOpen((open) => !open)} to="/crew">
+              Crew
+            </NavItem>
           </li>
           <li>
-            <NavItem to="/technology">Technology</NavItem>
+            <NavItem
+              onClick={() => setIsOpen((open) => !open)}
+              to="/technology"
+            >
+              Technology
+            </NavItem>
           </li>
         </ul>
       </Navigation>
@@ -62,7 +77,8 @@ const Navigation = styled.nav.withConfig({
   --width: 13rem;
   position: fixed;
   top: 0;
-  right: ${(props) => (props.isOpen ? "0" : `calc(-1 * var(--width))`)};
+  right: calc(-1 * var(--width));
+  /* right: ${(props) => (props.isOpen ? "0" : `calc(-1 * var(--width))`)}; */
   height: 100dvh;
   width: 100%;
   max-width: var(--width);
@@ -70,6 +86,10 @@ const Navigation = styled.nav.withConfig({
   backdrop-filter: blur(10px);
   transition: all 0.3s ease;
   z-index: 10;
+
+  &.open {
+    right: 0;
+  }
 
   @media screen and (min-width: 768px) {
     right: 0;
