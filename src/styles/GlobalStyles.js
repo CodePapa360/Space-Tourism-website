@@ -26,7 +26,7 @@ html {
 body {
   background-color:  hsla(223, 42%, 8%, 1);
   min-height: 100dvh;
-  color: rgb(238, 238, 238);
+  color: white;
   font-family: "Barlow", sans-serif;
   position: relative;
 

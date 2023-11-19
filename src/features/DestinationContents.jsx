@@ -12,9 +12,9 @@ import { breakpoints } from "../styles/GlobalStyles";
 import NotFound from "../components/NotFound";
 
 function DestinationContents() {
-  const destinations = jsonData.destinations;
+  const destinations = jsonData.destination;
   const { name: destinationName } = useParams();
-  const activeName = destinationName || destinations[0].destinationName;
+  const activeName = destinationName || destinations[0].name;
   const currentDest = destinations.find((des) => des.name === activeName);
 
   if (!destinationName)

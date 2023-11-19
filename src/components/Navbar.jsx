@@ -1,9 +1,11 @@
+import jsonData from "../assets/data.json";
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const navItemNames = Object.keys(jsonData);
 
   return (
     <StyledNavBar>
@@ -26,30 +28,16 @@ function Navbar() {
         <ul>
           <li>
             <NavItem onClick={() => setIsOpen((open) => !open)} to="/home">
-              Home
+              <span>00</span> <span>Home</span>
             </NavItem>
           </li>
-          <li>
-            <NavItem
-              onClick={() => setIsOpen((open) => !open)}
-              to="/destination"
-            >
-              Destination
-            </NavItem>
-          </li>
-          <li>
-            <NavItem onClick={() => setIsOpen((open) => !open)} to="/crew">
-              Crew
-            </NavItem>
-          </li>
-          <li>
-            <NavItem
-              onClick={() => setIsOpen((open) => !open)}
-              to="/technology"
-            >
-              Technology
-            </NavItem>
-          </li>
+          {navItemNames.map((item, i) => (
+            <li key={item}>
+              <NavItem onClick={() => setIsOpen((open) => !open)} to={item}>
+                <span>0{i + 1}</span> <span>{item}</span>
+              </NavItem>
+            </li>
+          ))}
         </ul>
       </Navigation>
     </StyledNavBar>
@@ -116,10 +104,15 @@ const Navigation = styled.nav.withConfig({
 `;
 
 const NavItem = styled(NavLink)`
-  display: inline-block;
+  display: flex;
+  gap: 0.5rem;
   border-bottom: 3px solid transparent;
   padding-top: 1rem;
   padding-bottom: 0.3rem;
+
+  :last-child {
+    opacity: 0.7;
+  }
 
   @media screen and (min-width: 768px) {
     padding: 1.5rem 1rem;
