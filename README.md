@@ -8,7 +8,9 @@
   <h3>
     <a href="https://space-tourism-codepapa.vercel.app">
       <strong>View Demo</strong>
-    </a> || <a href="">
+    </a> 
+    || 
+    <a href="https://www.frontendmentor.io/solutions/space-tourism-website-w-reactjs-GbYaAoC2Nc">
       <strong>Frontend Mentor</strong>
     </a>
   </h3>
