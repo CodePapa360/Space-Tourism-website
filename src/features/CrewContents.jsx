@@ -24,7 +24,7 @@ function CrewContents() {
       <Heading index="02">Meat your crew</Heading>
       <ContentsContainer dir="rtl">
         <ImageContainer>
-          <img src={currentCrew.images.png} alt={currentCrew.name} />
+          <img src={currentCrew.images.webp} alt={currentCrew.name} />
         </ImageContainer>
 
         <TopSectionContainer>

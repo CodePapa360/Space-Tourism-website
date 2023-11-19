@@ -27,7 +27,7 @@ function DestinationContents() {
 
       <ContentsContainer>
         <ImageContainer>
-          <img src={currentDest.images.png} alt={currentDest.name} />
+          <img src={currentDest.images.webp} alt={currentDest.name} />
         </ImageContainer>
 
         <TopSectionContainer>
