@@ -25,10 +25,6 @@ html {
 
 body {
   background-color:  hsla(223, 42%, 8%, 1);
-  background-image: url("/images/home/background-home-desktop.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
   min-height: 100dvh;
   color: rgb(238, 238, 238);
   font-family: "Barlow", sans-serif;
