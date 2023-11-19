@@ -8,11 +8,6 @@ const Heading = styled.h1.withConfig({
   font-weight: normal;
   font-size: 1rem;
   letter-spacing: 2px;
-  /* text-align: center; */
-
-  @media screen and (min-width: ${breakpoints.md}) {
-    /* text-align: left; */
-  }
 
   &::before {
     content: "${(props) => props.index}";

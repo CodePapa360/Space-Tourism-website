@@ -110,6 +110,10 @@ const NavItem = styled(NavLink)`
   padding-top: 1rem;
   padding-bottom: 0.3rem;
 
+  :first-child {
+    font-weight: bold;
+  }
+
   :last-child {
     opacity: 0.7;
   }
