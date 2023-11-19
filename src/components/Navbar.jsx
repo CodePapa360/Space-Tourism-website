@@ -57,6 +57,9 @@ function Navbar() {
 }
 
 export default Navbar;
+////////////////
+/////STYLES/////
+////////////////
 
 const StyledNavBar = styled.div`
   display: flex;
@@ -69,10 +72,6 @@ const StyledNavBar = styled.div`
     padding: 2rem 0 0 2rem;
   }
 `;
-
-////////////////
-/////STYLES/////
-////////////////
 
 const Navigation = styled.nav.withConfig({
   shouldForwardProp: (prop) => "isOpen" !== prop,

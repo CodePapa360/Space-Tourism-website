@@ -1,6 +1,7 @@
 <div align="center">
 
-  <img src="./public/images/favicon-32x32.png" alt="logo" width="30" height="auto">
+  <!-- <img src="./public/images/favicon-32x32.png" alt="logo" width="30" height="auto"> -->
+  <img src="./public/images/shared/logo.svg" alt="logo" width="40" height="auto">
 
   <h2>Space Tourism</h2>
 
