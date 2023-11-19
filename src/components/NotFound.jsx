@@ -6,8 +6,8 @@ function NotFound() {
 
   return (
     <StyledNotFound>
-      <span>Not found! ⚠</span>
-      <GoBackBtn onClick={() => navigate(-1)}>Click</GoBackBtn>
+      <span>404: Not found! ⚠️</span>
+      <GoBackBtn onClick={() => navigate(-1)}>&#10094; Go back</GoBackBtn>
     </StyledNotFound>
   );
 }

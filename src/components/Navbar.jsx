@@ -83,7 +83,7 @@ const Navigation = styled.nav.withConfig({
   height: 100dvh;
   width: 100%;
   max-width: var(--width);
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: hsla(0, 0%, 70%, 0.1);
   backdrop-filter: blur(10px);
   transition: all 0.3s ease;
   z-index: 100;

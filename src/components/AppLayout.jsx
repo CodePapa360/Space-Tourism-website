@@ -54,11 +54,11 @@ const StyledAppLayout = styled.div.withConfig({
 const MainContent = styled.main`
   max-width: ${breakpoints.md};
   margin: 2rem auto;
-  min-height: 100svh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  flex-grow: 1;
 
   @media screen and (min-width: ${breakpoints.sm}) {
     margin: 3rem auto;
