@@ -1,6 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
 export const breakpoints = {
+  xxs: "250px", // Very very small size devices
   xs: "320px", // Extra small devices (phones)
   sm: "768px", // Small devices (tablets)
   md: "992px", // Medium devices (desktops)
@@ -11,6 +12,15 @@ export const breakpoints = {
 const GlobalStyles = createGlobalStyle`
 html {
   scrollbar-gutter: stable;
+  font-size: 60%;
+
+  @media screen and (min-width: ${breakpoints.xxs})  {
+    font-size: 70%;
+  }
+
+  @media screen and (min-width: ${breakpoints.xs})  {
+    font-size: 100%;
+  }
 }
 
 body {
@@ -21,8 +31,6 @@ body {
   position: relative;
 
 }
-
-/* #42414d */
 
 @keyframes circleing {
   to {
