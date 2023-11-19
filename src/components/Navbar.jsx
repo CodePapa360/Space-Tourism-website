@@ -61,7 +61,7 @@ export default Navbar;
 /////STYLES/////
 ////////////////
 
-const StyledNavBar = styled.div`
+const StyledNavBar = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
