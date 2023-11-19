@@ -72,7 +72,7 @@ Users should be able to:
 ## Links
 
 - View Demo - https://space-tourism-codepapa.vercel.app
-- Solution page - [https://www.frontendmentor.io/solutions/...]()
+- Solution page - [https://www.frontendmentor.io/solutions/...](https://www.frontendmentor.io/solutions/space-tourism-website-w-reactjs-GbYaAoC2Nc)
 
 ## My process🛠️
 
